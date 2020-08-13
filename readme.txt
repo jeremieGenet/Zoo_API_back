@@ -7,3 +7,4 @@ API du Site MyZoo (back php-mysql)
     Connexion à la partie back :
         - Administrateur n°1 => name : admin, password : admin01 (password crypté dans la bdd)
         - Administrateur n°2 => name : admin02, password : admin02 (password crypté dans la bdd)
+
