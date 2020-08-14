@@ -75,16 +75,16 @@ try{
                             // Page d'affichage des familles : http://localhost/Animal-project/animal-back-php/back/families/diplay
                             case "display" : $familyController->getFamilies();
                             break;
-                            // Page de suppression de familles : http://localhost/Animal-project/animal-back-php/back/families/delete
+                            // Traitement de la suppression de familles : http://localhost/Animal-project/animal-back-php/back/families/delete
                             case "delete" : $familyController->deleteFamily();
                             break;
-                            // Page de modification de familles : http://localhost/Animal-project/animal-back-php/back/families/update
+                            // Traitement de la modification de familles : http://localhost/Animal-project/animal-back-php/back/families/update
                             case "update" : $familyController->updateFamily();
                             break;
                             // Page d'affichage du formulaire de création de familles : http://localhost/Animal-project/animal-back-php/back/families/creation_formulary
                             case "creation-formulary" : $familyController->getCreationForm();
                             break;
-                            // Page de création de familles : http://localhost/Animal-project/animal-back-php/back/families/create
+                            // Traitement de la création de familles : http://localhost/Animal-project/animal-back-php/back/families/create
                             case "create" : $familyController->createFamily();
                             break;
                             default : throw new Exception ("La page n'existe pas 4");
@@ -95,9 +95,16 @@ try{
                             // Page d'affichage des animaux : http://localhost/Animal-project/animal-back-php/back/animals/display
                             case "display" : $animalController->getAnimals();
                             break;
-                            // Page de suppression de familles : http://localhost/Animal-project/animal-back-php/back/animals/delete
+                            // Traitement de la suppression d'un animal : http://localhost/Animal-project/animal-back-php/back/animals/delete
                             case "delete" : $animalController->deleteAnimal();
                             break;
+                            // Page d'affichage du formulaire de création d'un animal : http://localhost/Animal-project/animal-back-php/back/animals/creation_formulary
+                            case "creation-formulary" : $animalController->getCreationForm();
+                            break;
+                            // Traitement de la création d'un animal : http://localhost/Animal-project/animal-back-php/back/animals/create
+                            case "create" : $animalController->createAnimal();
+                            break;
+                            
                             default : throw new Exception ("La page n'existe pas 5");
                         }
                     break;
