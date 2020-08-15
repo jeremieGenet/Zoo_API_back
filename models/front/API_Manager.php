@@ -25,8 +25,8 @@ class API_Manager extends Model{
         $req = "SELECT *
             from animal a 
             inner join family f on f.family_id = a.family_id
-            inner join animal_continent ac on ac.animal_id = a.animal_id
-            inner join continent c on c.continent_id = ac.continent_id ".$whereClause
+            left join animal_continent ac on ac.animal_id = a.animal_id
+            left join continent c on c.continent_id = ac.continent_id ".$whereClause
         ;
 
         $stmt = $this->getBdd()->prepare($req);

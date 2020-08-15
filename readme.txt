@@ -8,3 +8,8 @@ API du Site MyZoo (back php-mysql) => L'api communique avec Le site MyZoo fait e
         - Administrateur n°1 => name : admin, password : admin01 (password crypté dans la bdd)
         - Administrateur n°2 => name : admin02, password : admin02 (password crypté dans la bdd)
 
+<!-- Champ IMAGE -->
+<div class="form-group">
+    <label for="imageLg">Image (Grande taille)</label>
+    <input type="file" class="form-control-file" id="imageLg" name="imageLg"/>
+</div>

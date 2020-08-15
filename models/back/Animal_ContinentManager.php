@@ -15,6 +15,23 @@ class Animal_ContinentManager extends Model
         $stmt->bindValue(":continentId", $continentId, PDO::PARAM_INT);
         $stmt->execute();
     }
+    // Récup les id des continents d'un animal (en fonction de l'id de l'animal)
+    public function getContinentsById($idAnimal){
+        $req = "SELECT continent_id from animal_continent WHERE animal_id = :idAnimal";
+        $stmt = $this->getBdd()->prepare($req);
+        $stmt->bindValue(":idAnimal", $idAnimal, PDO::PARAM_INT);
+        $stmt->execute();
+        $continentsId = $stmt->fetchAll(PDO::FETCH_COLUMN); // "PDO::FETCH_COLUMN" retourne un tableau sous la forme index => valeur
+        return $continentsId;
+    }
+    //
+    public function delete($idAnimal){
+        // Suppression de l'animal dans la table de liaison 'animal_continent'
+        $req = "DELETE FROM animal_continent WHERE animal_id= :idAnimal";
+        $stmt = $this->getBdd()->prepare($req);
+        $stmt->bindValue(":idAnimal", $idAnimal, PDO::PARAM_INT);
+        $stmt->execute();
+    }
 
     
 

@@ -4,7 +4,7 @@
 
 <?php ob_start(); ?>
 
-<form method="POST" action="<?= URL ?>back/animals/create">
+<form method="POST" action="<?= URL ?>back/animals/create" enctype="multipart/form-data">
     <!-- Champ NOM -->
     <div class="form-group">
         <label for="name">Nom</label>
@@ -15,11 +15,17 @@
         <label for="description">Description</label>
         <textarea class="form-control" name="description" rows="3"></textarea>
     </div>
-    <!-- Champ IMAGE -->
+    <!-- Champ IMAGE SMALL -->
     <div class="form-group">
-        <label for="image">Image</label>
-        <input type="file" class="form-control" name="image">
+        <label for="imageSm">Image (Petite taille)</label>
+        <input type="file" class="form-control-file" id="imageSm" name="imageSm"/>
     </div>
+    <!-- Champ IMAGE LARGE-->
+    <div class="form-group">
+        <label for="imageLg">Image (Grande taille)</label>
+        <input type="file" class="form-control-file" id="imageLg" name="imageLg"/>
+    </div>
+    
     <!-- Champ DES FAMILLES (select) -->
     <div class="form-group">
         <label for="family">Familles</label>
@@ -46,7 +52,7 @@
         <?php endforeach; ?>
     </div>
 
-    <button type="submit" class="btn btn-info">Valider</button>
+    <button type="submit" class="btn btn-info">Créer</button>
 </form>
 
 <?php

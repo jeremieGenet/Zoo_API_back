@@ -31,7 +31,10 @@
                     <!-- Formulaire de MODIFICATION d'un animal -->
                     <form method="POST" action="">
                         <input type="hidden" name="update_animal_id" value="<?= $animal['animal_id'] ?>" />
-                        <button class="btn btn-warning">Modifier</button>
+                        <!-- L'id de l'animal en param d'url (pour identifier l'animal dans le formulaire de modification) -->
+                        <a href="<?= URL?>back/animals/update-formulary/<?= $animal['animal_id'] ?>"> 
+                            <button class="btn btn-warning" type="button">Modifier</button>
+                        </a>
                     </form>
                 </td>
                 <td>

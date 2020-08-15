@@ -6,7 +6,7 @@ require_once "./models/Model.php"; // Récup de la bdd
 class ContinentManager extends Model
 {
 
-    // Récup toutes les familles (d'animaux)
+    // Récup toutes les continents
     public function continents(){
         $req = "SELECT * FROM continent";
         $stmt = $this->getBdd()->prepare($req);

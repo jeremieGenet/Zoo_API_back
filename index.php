@@ -106,10 +106,11 @@ try{
                             break;
                             
                             // Page d'affichage du FORMULAIRE DE MODIFICATION d'un animal : http://localhost/Animal-project/animal-back-php/back/animals/update_formulary
-                            case "update-formulary" : $animalController->getUpdateForm();
+                            
+                            case "update-formulary" : $animalController->getUpdateForm((int)$url[3]); // Récup du param d'url "$url[3]" qui représente l'id de l'animal à modifier
                             break;
                             // Traitement de la MODIFICATION d'un animal : http://localhost/Animal-project/animal-back-php/back/animals/update
-                            case "create" : $animalController->updateAnimal();
+                            case "update" : $animalController->updateAnimal((int)$url[3]); // Récup du param d'url "$url[3]" qui représente l'id de l'animal à modifier
                             break;
                             
                             default : throw new Exception ("La page n'existe pas 5");

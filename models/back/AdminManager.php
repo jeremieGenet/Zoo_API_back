@@ -3,7 +3,7 @@
 require_once "./models/Model.php";
 
 
-// Gère les requêtes BDD concernant la table administrator
+// Gère les requêtes BDD concernant la table administrato
 class AdminManager extends Model
 {
 
