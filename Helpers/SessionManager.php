@@ -3,6 +3,15 @@
 // Gère les actions liés à la SESSION
 class SessionManager{
 
+    // Création d'une Message de session (avec class bootstrap), SIGNATURE : SessionManager::createMessage('alert', "success", "La famille est supprimée");
+    public static function createMessage(string $name, string $type, string $message)
+    {
+        $_SESSION[$name] = [
+            "type" => $type,
+            "message" => $message
+        ];
+    }
+
     // Affiche le message de la session (div bootstrap), SIGNATURE : SessionManager::displaySessionMessage('alert');
     public static function displaySessionMessage($name)
     {
@@ -18,13 +27,5 @@ class SessionManager{
         unset($_SESSION[$name]);
     }
 
-    // Création d'une Message de session (avec class bootstrap), SIGNATURE : SessionManager::createMessage('alert', "success", "La famille est supprimée");
-    public static function createMessage(string $name, string $type, string $message)
-    {
-        $_SESSION[$name] = [
-            "type" => $type,
-            "message" => $message
-        ];
-    }
-
+    
 }

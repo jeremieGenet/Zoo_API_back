@@ -10,7 +10,7 @@ class Security{
         return htmlentities($string);
     }
 
-    // Vérif si dans Session on a bien la valeur access et qui acess = admin
+    // Vérif si dans Session on a bien la valeur "access" et que access = admin (Valeur ajoutée aprés avoir vérif que le nom et password admin soient valides)
     public static function verifAccessSession(){
         return (!empty($_SESSION['access']) && $_SESSION['access'] === "admin");
     }

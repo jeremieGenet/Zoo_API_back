@@ -7,7 +7,7 @@
 <!-- Envoi vers la page de traitement du formulaire, à la soummission (http://localhost/Animal-project/animal-back-php/back/login) -->
 <form method="POST" action="<?= URL ?>back/login">
     <div class="form-group">
-        <label for="name">Name</label>
+        <label for="name">Nom</label>
         <input type="text" class="form-control" id="name" name="name" aria-describedby="nameHelp">
     </div>
     <div class="form-group">

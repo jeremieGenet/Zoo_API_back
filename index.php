@@ -95,14 +95,21 @@ try{
                             // Page d'affichage des animaux : http://localhost/Animal-project/animal-back-php/back/animals/display
                             case "display" : $animalController->getAnimals();
                             break;
-                            // Traitement de la suppression d'un animal : http://localhost/Animal-project/animal-back-php/back/animals/delete
+                            // Traitement de la SUPPRESSION d'un animal : http://localhost/Animal-project/animal-back-php/back/animals/delete
                             case "delete" : $animalController->deleteAnimal();
                             break;
-                            // Page d'affichage du formulaire de création d'un animal : http://localhost/Animal-project/animal-back-php/back/animals/creation_formulary
+                            // Page d'affichage du FORMULAIRE D CREATION d'un animal : http://localhost/Animal-project/animal-back-php/back/animals/creation_formulary
                             case "creation-formulary" : $animalController->getCreationForm();
                             break;
                             // Traitement de la création d'un animal : http://localhost/Animal-project/animal-back-php/back/animals/create
                             case "create" : $animalController->createAnimal();
+                            break;
+                            
+                            // Page d'affichage du FORMULAIRE DE MODIFICATION d'un animal : http://localhost/Animal-project/animal-back-php/back/animals/update_formulary
+                            case "update-formulary" : $animalController->getUpdateForm();
+                            break;
+                            // Traitement de la MODIFICATION d'un animal : http://localhost/Animal-project/animal-back-php/back/animals/update
+                            case "create" : $animalController->updateAnimal();
                             break;
                             
                             default : throw new Exception ("La page n'existe pas 5");

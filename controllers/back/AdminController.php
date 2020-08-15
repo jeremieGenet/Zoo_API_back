@@ -29,13 +29,24 @@ class AdminController{
 
             // Si la vérif que l'admin à valider sa connexion (bon name et password) ...
             if($this->adminManager->isConnexionValid($name, $password)){
-                echo "ca marche 111 ???";
+                // Création d'une variable de session (qui permettra de vérifier)
                 $_SESSION['access'] = 'admin';
-                header('Location: '.URL."back/admin"); // Redirige vers la page d'accueil de l'administration
+                // Création d'un message de session
+                SessionManager::createMessage('alert', "success", "Vous êtes maintenant connecté.");
+                // Redirige vers la page d'accueil de l'administration
+                header('Location: '.URL."back/admin"); 
             }else{
-                echo "ca marche pas 2222 ???";
-                header('Location: '.URL."back/login-page"); // Redirige vers la page de connexion
+                // Création d'un message de session
+                SessionManager::createMessage('alert', "danger", "Le 'Nom' ou le 'Password' ne sont pas correctement renseignés.");
+                // Redirige vers la page de connexion
+                header('Location: '.URL."back/login-page"); 
             }
+        }else{
+            echo "Champs name et pass vides!!!!";
+            // Création d'un message de session
+            SessionManager::createMessage('alert', "danger", "Les champs ne sont pas renseignés.");
+            // Redirige vers la page d'affichage des animaux
+            header('Location: '.URL."back/login-page");
         }
     }
 

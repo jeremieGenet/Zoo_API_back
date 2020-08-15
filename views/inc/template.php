@@ -22,7 +22,7 @@
 
     <div class="container">
 
-        <?php //var_dump($_SESSION['alert']) ?>
+        <?php //var_dump($_SESSION) ?>
 
         <h1 class="m-2 p-2 text-center"><?= $h1 ?></h1>
 

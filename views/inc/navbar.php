@@ -43,7 +43,7 @@
                 <!-- Si l'admin n'est pas connecté (on affiche le bouton de LOGIN) -->
                 <?php if(!Security::verifAccessSession()) : ?>
                 <li class="nav-item">
-                    <a class="nav-link btn btn-outline-success my-1 mr-2" href="<?= URL?>back/loginPage">Se connecter</a>
+                    <a class="nav-link btn btn-outline-success my-1 mr-2" href="<?= URL?>back/login-page">Se connecter</a>
                 </li>
                 <!-- Sinon si l'admin estconnecté (on affiche le bouton de LOGOUT) -->
                 <?php else : ?>
